@@ -1,0 +1,28 @@
+@import "../variable";
+@media screen and (min-width: 768px) {
+  #mynav{
+    background-color: rgba(255,255,255,0.90);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    //border-bottom:none;
+    li>a{
+      color: rgba(0,0,0,0.7);
+      &:hover{
+        color: rgba(0,0,0,0.4);
+      }
+    }
+  }
+}
+#mynav{
+  .navbar-brand{
+    color: @blue!important;
+    font-weight: normal;
+    &:hover{
+      color:lighten(@blue,10%)!important;
+    }
+    img{
+      height: 20px;
+    }
+  }
+}
+
+

@@ -1,0 +1,49 @@
+extends ../layout
+block head
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/stylesheets/index_ie.css">
+    <![endif]-->
+
+    link(rel='stylesheet',href='/stylesheets/cover/eachcover.css')
+    style.
+        .bg{
+            background-image:url('#{cover.img.px1366}');
+           }
+block content
+    .cover-index.bg
+        .cover-touming
+            .cover-wrapper
+                .getback
+                    a(href="/")
+                        i.fa.fa-angle-left
+
+                h1.cover-title=cover.title
+                .quote-warpper
+                    .quote!=cover.contentBegin
+
+    .cover-content.container
+         .content!=cover.content
+         if user
+            span
+                a(href='/editcover/'+cover._id) Edit
+         .comment
+             #disqus_thread.blog-comment(data-thread-key=""+cover._id, data-title=cover.title,data-url="http://lingyong.me/cover/"+cover._id,data-author-key="灵勇",data-image="http://lingyong.me"+cover.img.px600)
+
+
+
+block scripts
+    script(src='/javascripts/home/index.js')
+    script.
+     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'lingyong'; // required: replace example with your forum shortname
+            var disqus_identifier = '#{cover._id}';
+         var disqus_title = '#{cover.title}';
+             var disqus_url = 'http://lingyong.me/cover/#{cover._id}';
+
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+        $('#mynav').hide();

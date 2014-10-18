@@ -1,0 +1,85 @@
+@main-color: #3498DB ;
+@second-color:#FFB233;
+@import "../include/_mynav_white";
+
+body{
+  background-color: rgba(0,0,0,0.005)!important;
+  .home-logo{
+    color: #3498DB;
+    font-weight: bolder;
+
+  }
+
+  .allblog{
+    //margin-top: 55px;
+    max-width: 720px;
+    .blog-img{
+      img{
+        &:hover{
+          box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+      }
+    }
+    .blog-title{
+      padding: 10px 10px 10px 0px;
+     // border-left: 5px solid lighten(@main-color,10%);
+      //background-color:lighten(@main-color,10%);
+      color: rgba(0,0,0,0.9);
+      display:block;
+      &:hover{
+        text-decoration: none;
+        color: dodgerblue;
+      }
+    }
+    .blog-wrapper{
+      padding: 10px;
+    }
+    .ajax{
+      padding: 30px 20px;
+      .get-ten{
+        border-radius: 2px;
+        height: 50px;
+        border: none;
+      }
+    }
+    .blog-content{
+
+      color: rgba(0,0,0,0.65);
+      line-height: 1.5em;
+      &:hover{
+        color: rgba(0,0,0,0.8);
+      }
+      pre{
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+
+        whitewhite-space : normal ; /* Internet Explorer 5.5+ */
+      }
+
+    }
+    .blog-content-footer
+    {
+      color: rgba(0,0,0,0.6);
+      font-size: 12px;
+      font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1"!important;
+
+      i{
+        color: @main-color;
+        padding-right: 10px;
+      }
+    }
+
+    img{
+      max-width: 100%;
+      margin: 10px 0;
+
+     }
+  }
+
+
+
+}
+

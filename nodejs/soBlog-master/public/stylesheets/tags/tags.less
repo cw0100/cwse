@@ -1,0 +1,65 @@
+@import "../include/_mynav_white";
+@import "../variable";
+
+body{
+  background-color: #fff!important;
+  .pager{
+    .tags{
+      //padding: 30px;
+      padding-top: 30px;
+    }
+    margin-top: 70px;
+    .tag{
+
+      display: block;
+      background-color: rgba(0,0,0,0.1)!important;
+      color: rgba(0,0,0,0.7);
+      min-height: @grid-size;
+      &:hover{
+        text-decoration: none;
+      }
+
+      h1{
+        line-height: @grid-size;
+        padding: 0;
+        margin: 0;
+      }
+      >a{
+        position: relative;
+        text-decoration: none;
+        height: @grid-size;
+        overflow: hidden;
+        display: block;
+        .count{
+           width: 100%;
+          text-align: center;
+          line-height: @grid-size;
+          height: @grid-size;
+          overflow: hidden;
+          font-size: 30px;
+          overflow: hidden;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #ffffff;
+          background-color: cornflowerblue;
+        }
+      }
+
+
+     
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .eachblog{
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1"!important;
+
+
+  }
+
+
+
+}
