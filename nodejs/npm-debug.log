@@ -1,13 +1,14 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'publish' ]
+1 verbose cli   'install',
+1 verbose cli   'lincell' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 verbose publish [ '.' ]
-6 verbose cache add [ '.', null ]
-7 verbose cache add name=undefined spec="." args=[".",null]
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'lincell', null ]
+7 verbose cache add name=undefined spec="lincell" args=["lincell",null]
 8 verbose parsed url { protocol: null,
 8 verbose parsed url   slashes: null,
 8 verbose parsed url   auth: null,
@@ -17,88 +18,91 @@
 8 verbose parsed url   hash: null,
 8 verbose parsed url   search: null,
 8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: '.',
-8 verbose parsed url   path: '.',
-8 verbose parsed url   href: '.' }
-9 silly lockFile 3a52ce78- .
-10 verbose lock . C:\Users\CW\AppData\Roaming\npm-cache\3a52ce78-.lock
-11 verbose tar pack [ 'C:\\Users\\CW\\AppData\\Roaming\\npm-cache\\cwse\\1.0.0\\package.tgz',
-11 verbose tar pack   '.' ]
-12 verbose tarball C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package.tgz
-13 verbose folder .
-14 info prepublish cwse@1.0.0
-15 silly lockFile 1f1177db-tar tar://.
-16 verbose lock tar://. C:\Users\CW\AppData\Roaming\npm-cache\1f1177db-tar.lock
-17 silly lockFile 8eee49c8-npm-cache-cwse-1-0-0-package-tgz tar://C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package.tgz
-18 verbose lock tar://C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package.tgz C:\Users\CW\AppData\Roaming\npm-cache\8eee49c8-npm-cache-cwse-1-0-0-package-tgz.lock
-19 silly lockFile 1f1177db-tar tar://.
-20 silly lockFile 1f1177db-tar tar://.
-21 silly lockFile 8eee49c8-npm-cache-cwse-1-0-0-package-tgz tar://C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package.tgz
-22 silly lockFile 8eee49c8-npm-cache-cwse-1-0-0-package-tgz tar://C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package.tgz
-23 silly lockFile e9d734ca-ing-npm-cache-cwse-1-0-0-package C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package
-24 verbose lock C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package C:\Users\CW\AppData\Roaming\npm-cache\e9d734ca-ing-npm-cache-cwse-1-0-0-package.lock
-25 silly lockFile e9d734ca-ing-npm-cache-cwse-1-0-0-package C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package
-26 silly lockFile e9d734ca-ing-npm-cache-cwse-1-0-0-package C:\Users\CW\AppData\Roaming\npm-cache\cwse\1.0.0\package
-27 silly lockFile 3a52ce78- .
-28 silly lockFile 3a52ce78- .
-29 silly publish { name: 'cwse',
-29 silly publish   version: '1.0.0',
-29 silly publish   main: 'index.js',
-29 silly publish   dependencies: { hvalidator: '^0.3.5' },
-29 silly publish   devDependencies: {},
-29 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-29 silly publish   author: { name: 'cw0100' },
-29 silly publish   license: 'MIT',
-29 silly publish   description: 'cwse',
-29 silly publish   repository: { type: 'git', url: 'https://github.com/cw0100' },
-29 silly publish   readme: 'cwse\r\n\r\n',
-29 silly publish   readmeFilename: 'readme.md',
-29 silly publish   _id: 'cwse@1.0.0',
-29 silly publish   _shasum: '3e533c50de74193cce902b3fb61f4dd1b013c80d',
-29 silly publish   _from: '.' }
-30 verbose request where is /cwse
-31 verbose request registry https://registry.npmjs.org/
-32 verbose request id ce58743b13e35983
-33 verbose url raw /cwse
-34 verbose url resolving [ 'https://registry.npmjs.org/', './cwse' ]
-35 verbose url resolved https://registry.npmjs.org/cwse
-36 verbose request where is https://registry.npmjs.org/cwse
-37 info trying registry request attempt 1 at 12:43:44
-38 http PUT https://registry.npmjs.org/cwse
-39 http 403 https://registry.npmjs.org/cwse
-40 verbose headers { date: 'Sat, 18 Oct 2014 04:47:55 GMT',
-40 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-40 verbose headers   'content-type': 'application/json',
-40 verbose headers   'cache-control': 'max-age=60',
-40 verbose headers   'content-length': '1557',
-40 verbose headers   'accept-ranges': 'bytes',
-40 verbose headers   via: '1.1 varnish',
-40 verbose headers   'x-served-by': 'cache-ty66-TYO',
-40 verbose headers   'x-cache': 'MISS',
-40 verbose headers   'x-cache-hits': '0',
-40 verbose headers   'x-timer': 'S1413607430.140826,VS0,VE245625',
-40 verbose headers   'keep-alive': 'timeout=10, max=50',
-40 verbose headers   connection: 'Keep-Alive' }
-41 error publish Failed PUT 403
-42 error Error: forbidden cannot modify pre-existing version: 1.0.0
-42 error old={"name":"cwse","version":"1.0.0","main":"index.js","dependencies":{"hvalidator":"^0.3.5"},"devDependencies":{},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"cw0100"},"license":"MIT","_id":"cwse@1.0.0","_shasum":"117074805fa3a293b35a7768a27692814496d02b","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"cw0100","email":"cw0100@163.com"},"maintainers":[{"name":"cw0100","email":"cw0100@163.com"}],"dist":{"shasum":"117074805fa3a293b35a7768a27692814496d02b","tarball":"http://registry.npmjs.org/cwse/-/cwse-1.0.0.tgz"}}
-42 error new={"name":"cwse","version":"1.0.0","main":"index.js","dependencies":{"hvalidator":"^0.3.5"},"devDependencies":{},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"cw0100"},"license":"MIT","description":"cwse","repository":{"type":"git","url":"https://github.com/cw0100"},"readme":"cwse\u000d\u000a\u000d\u000a","readmeFilename":"readme.md","_id":"cwse@1.0.0","_shasum":"3e533c50de74193cce902b3fb61f4dd1b013c80d","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"cw0100","email":"cw0100@163.com"},"maintainers":[{"name":"cw0100","email":"cw0100@163.com"}],"dist":{"shasum":"3e533c50de74193cce902b3fb61f4dd1b013c80d","tarball":"http://registry.npmjs.org/cwse/-/cwse-1.0.0.tgz"}}: cwse
-42 error     at RegClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:308:14)
-42 error     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:246:65)
-42 error     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:236:22)
-42 error     at Request.emit (events.js:98:17)
-42 error     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1142:14)
-42 error     at Request.emit (events.js:117:20)
-42 error     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1096:12)
-42 error     at IncomingMessage.emit (events.js:117:20)
-42 error     at _stream_readable.js:943:16
-42 error     at process._tickCallback (node.js:419:13)
-43 error If you need help, you may report this *entire* log,
-43 error including the npm and node versions, at:
-43 error     <http://github.com/npm/npm/issues>
-44 error System Windows_NT 6.1.7600
-45 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
-46 error cwd D:\SE\nodejs
-47 error node -v v0.10.32
-48 error npm -v 1.4.28
-49 verbose exit [ 1, true ]
+8 verbose parsed url   pathname: 'lincell',
+8 verbose parsed url   path: 'lincell',
+8 verbose parsed url   href: 'lincell' }
+9 silly lockFile 48038b18-lincell lincell
+10 verbose lock lincell C:\Users\CW\AppData\Roaming\npm-cache\48038b18-lincell.lock
+11 silly lockFile 48038b18-lincell lincell
+12 silly lockFile 48038b18-lincell lincell
+13 verbose addNamed [ 'lincell', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 4ed10fa0-lincell lincell@
+16 verbose lock lincell@ C:\Users\CW\AppData\Roaming\npm-cache\4ed10fa0-lincell.lock
+17 silly addNameRange { name: 'lincell', range: '*', hasData: false }
+18 verbose request where is /lincell
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id c12e0c10fc0830a1
+21 verbose url raw /lincell
+22 verbose url resolving [ 'https://registry.npmjs.org/', './lincell' ]
+23 verbose url resolved https://registry.npmjs.org/lincell
+24 verbose request where is https://registry.npmjs.org/lincell
+25 info trying registry request attempt 1 at 07:25:34
+26 http GET https://registry.npmjs.org/lincell
+27 http 200 https://registry.npmjs.org/lincell
+28 silly registry.get cb [ 200,
+28 silly registry.get   { date: 'Sun, 19 Oct 2014 23:25:38 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     etag: '"5W9SKX6VSAZMM0WBQBDX2UHCT"',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     'content-length': '13489',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-ty66-TYO',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1413761137.647566,VS0,VE586',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 silly addNameRange number 2 { name: 'lincell', range: '*', hasData: true }
+30 silly addNameRange versions [ 'lincell',
+30 silly addNameRange   [ '0.0.1',
+30 silly addNameRange     '0.0.3',
+30 silly addNameRange     '0.0.4',
+30 silly addNameRange     '0.0.5',
+30 silly addNameRange     '0.0.6',
+30 silly addNameRange     '0.1.0',
+30 silly addNameRange     '0.1.1',
+30 silly addNameRange     '0.1.2',
+30 silly addNameRange     '0.1.3',
+30 silly addNameRange     '0.1.4',
+30 silly addNameRange     '0.1.5' ] ]
+31 verbose addNamed [ 'lincell', '0.1.5' ]
+32 verbose addNamed [ '0.1.5', '0.1.5' ]
+33 silly lockFile 5d14632a-lincell-0-1-5 lincell@0.1.5
+34 verbose lock lincell@0.1.5 C:\Users\CW\AppData\Roaming\npm-cache\5d14632a-lincell-0-1-5.lock
+35 silly lockFile d562ae8f-js-org-lincell-lincell-0-1-5-tgz https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz
+36 verbose lock https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz C:\Users\CW\AppData\Roaming\npm-cache\d562ae8f-js-org-lincell-lincell-0-1-5-tgz.lock
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz',
+37 verbose addRemoteTarball   '585869c859da26b83e9520c521aa7b439739b503' ]
+38 info retry fetch attempt 1 at 07:25:36
+39 verbose fetch to= C:\Users\CW\AppData\Local\Temp\npm-1260-T0rg4BK-\registry.npmjs.org\lincell\-\lincell-0.1.5.tgz
+40 http GET https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz
+41 http 200 https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz
+42 silly lockFile d562ae8f-js-org-lincell-lincell-0-1-5-tgz https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz
+43 silly lockFile d562ae8f-js-org-lincell-lincell-0-1-5-tgz https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz
+44 silly lockFile 5d14632a-lincell-0-1-5 lincell@0.1.5
+45 silly lockFile 5d14632a-lincell-0-1-5 lincell@0.1.5
+46 silly lockFile 4ed10fa0-lincell lincell@
+47 silly lockFile 4ed10fa0-lincell lincell@
+48 error Error: shasum check failed for C:\Users\CW\AppData\Local\Temp\npm-1260-T0rg4BK-\registry.npmjs.org\lincell\-\lincell-0.1.5.tgz
+48 error Expected: 585869c859da26b83e9520c521aa7b439739b503
+48 error Actual:   42ffa82d82ecd98340847fa37825b7c64490bfdc
+48 error From:     https://registry.npmjs.org/lincell/-/lincell-0.1.5.tgz
+48 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\sha\index.js:38:8
+48 error     at ReadStream.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\sha\index.js:85:7)
+48 error     at ReadStream.emit (events.js:117:20)
+48 error     at _stream_readable.js:943:16
+48 error     at process._tickCallback (node.js:419:13)
+49 error If you need help, you may report this *entire* log,
+49 error including the npm and node versions, at:
+49 error     <http://github.com/npm/npm/issues>
+50 error System Windows_NT 6.1.7600
+51 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "lincell"
+52 error cwd D:\SE\git\nodejs
+53 error node -v v0.10.32
+54 error npm -v 1.4.28
+55 verbose exit [ 1, true ]

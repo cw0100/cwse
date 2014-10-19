@@ -1,6 +1,6 @@
 {
   "name": "cwse",
-  "version": "1.0.20141018",
+  "version": "1.0.20141019",
   "main": "index.js",
   "dependencies": {
     
